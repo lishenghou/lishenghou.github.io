@@ -175,8 +175,9 @@ audio.ontimeupdate = () => {
 }
 
 // 鼠标按住移动,拖拽进度条
-rate.onmousedown = () => {
-    rate.onmousemove = (e) => {
+bar.onmousedown = () => {
+    bar.onmousemove = (e) => {
+        // console.log(11);
         // 进度条的宽度
         let rateX = e.offsetX
         rate.style.width = 3 + rateX + 'px'
@@ -185,13 +186,15 @@ rate.onmousedown = () => {
 }
 
 // 鼠标松开清除移动事件
-rate.onmouseup = () => {
-    rate.onmousemove = null
+bar.onmouseup = () => {
+    // console.log(111);
+    bar.onmousemove = null
 }
 
 // 鼠标离开rate清除移动事件
-rate.onmouseout = () => {
-    rate.onmousemove = null
+bar.onmouseleave = () => {
+    console.log(111);
+    bar.onmousemove = null
 }
 
 // 鼠标点击bar
